@@ -18,26 +18,26 @@ self.addEventListener('push', function(event) {
         // Retrieve a list of the clients of this service worker.
         self.clients.matchAll().then(function(clientList) {
             // Check if there's at least one focused client.
+            const data = event.data ? event.data.text() : 'Error'
             const focused = clientList.some(function(client) {
                 return client.focused;
             });
-
-            let notificationMessage;
+            console.log(data)
+            const {title, message, fromWho} = JSON.parse(data)
+            let notificationMessage ;
             if (focused) {
-                notificationMessage = 'You\'re still here, thanks!';
+                notificationMessage = message;
             } else if (clientList.length > 0) {
-                notificationMessage = 'You haven\'t closed the page, ' +
-                    'click here to focus it!';
+                notificationMessage = 'Tenes una notificacion de ' + fromWho + '!!!';
             } else {
-                notificationMessage = 'You have closed the page, ' +
-                    'click here to re-open it!';
+                notificationMessage = 'Cerraste la App, Tenes una notificacion!!!';
             }
 
             // Show a notification with title 'ServiceWorker Cookbook' and body depending
             // on the state of the clients of the service worker (three different bodies:
             // 1, the page is focused; 2, the page is still open but unfocused; 3, the page
             // is closed).
-            return self.registration.showNotification('ServiceWorker Cookbook', {
+            return self.registration.showNotification(title, {
                 body: notificationMessage,
             });
         })
