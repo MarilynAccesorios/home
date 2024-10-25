@@ -22,7 +22,6 @@ self.addEventListener('push', function(event) {
             const focused = clientList.some(function(client) {
                 return client.focused;
             });
-            console.log(data)
             const {title, message, fromWho} = JSON.parse(data)
             let notificationMessage ;
             if (focused) {
@@ -33,6 +32,8 @@ self.addEventListener('push', function(event) {
                 notificationMessage = 'Cerraste la App, Tenes una notificacion!!!';
             }
             return self.registration.showNotification(title, {
+                icon: 'logo192.png', // Path to your icon
+                badge: 'logo192.png', // Optional badge icon
                 body: notificationMessage,
             });
         })
