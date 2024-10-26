@@ -20,7 +20,7 @@ self.addEventListener('push', function(event) {
             // Check if there's at least one focused client.
             const data = event.data ? event.data.text() : 'Error'
             const focused = clientList.some(function(client) {
-                return client.focused;
+                return client.visibilityState === 'visible';
             });
             const {title, message, fromWho} = JSON.parse(data)
             let notificationMessage ;
