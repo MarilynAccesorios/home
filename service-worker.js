@@ -4,11 +4,9 @@
 
 self.addEventListener('install', function(event) {
     event.waitUntil(self.skipWaiting());
-    console.log('install')
 });
 
 self.addEventListener('activate', function(event) {
-    console.log('activate')
     event.waitUntil(self.clients.claim());
 });
 

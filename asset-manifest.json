@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "http://localhost:3000/static/css/main.99a56667.css",
-    "main.js": "http://localhost:3000/static/js/main.e3d5f15d.js",
+    "main.css": "http://localhost:3000/static/css/main.c397ae4c.css",
+    "main.js": "http://localhost:3000/static/js/main.96a50a8d.js",
     "static/js/787.9e9f4ffd.chunk.js": "http://localhost:3000/static/js/787.9e9f4ffd.chunk.js",
     "static/media/success.svg": "http://localhost:3000/static/media/success.5968f51bcdcc67f3127d13877094ed55.svg",
     "static/media/404.png": "http://localhost:3000/static/media/404.407f433d1a4fae14226e.png",
     "static/media/img.png": "http://localhost:3000/static/media/img.b6efa7246be362157f58.png",
     "index.html": "http://localhost:3000/index.html",
-    "main.99a56667.css.map": "http://localhost:3000/static/css/main.99a56667.css.map",
-    "main.e3d5f15d.js.map": "http://localhost:3000/static/js/main.e3d5f15d.js.map",
+    "main.c397ae4c.css.map": "http://localhost:3000/static/css/main.c397ae4c.css.map",
+    "main.96a50a8d.js.map": "http://localhost:3000/static/js/main.96a50a8d.js.map",
     "787.9e9f4ffd.chunk.js.map": "http://localhost:3000/static/js/787.9e9f4ffd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99a56667.css",
-    "static/js/main.e3d5f15d.js"
+    "static/css/main.c397ae4c.css",
+    "static/js/main.96a50a8d.js"
   ]
 }
